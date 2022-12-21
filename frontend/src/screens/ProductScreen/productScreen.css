@@ -1,0 +1,130 @@
+.productScreen{
+    width: 100%;
+    margin: 1rem auto;
+    display: flex;
+}
+
+.left{
+    display: flex;
+    flex: 0.8;
+}
+
+.left__image{
+    margin: 1rem;
+    flex: 0.8;
+}
+
+.left__info{
+    margin: 1rem;
+    flex: 0.2;
+    font-size: 1rem;
+}
+
+.prod__name{
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.price{
+    font-weight:600;
+}
+
+.left__info > p,
+.right__info > p{
+    padding: 1rem; 
+    font-size: 1rem;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.left__info > :last-child,
+.right__info > p:last-child{
+    border:none;
+}
+
+/* right */
+.right{
+    margin: 1rem;
+    flex: 0.2;
+}
+
+.right__info{
+    margin: 1rem;
+    width: 250px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    height: fit-content;
+}
+
+.right__info > p{
+    /* margin: 1rem; */
+    font-size: 1rem;
+    font-weight:bold;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.right__info p > span{
+    font-weight:500;
+}
+
+
+.right__info p > button{
+    grid-column: 1/-1;
+    padding: 0.3rem 0.3rem;
+    background: black;
+    color: aliceblue;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.right__info p > button:hover{
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+.right__info p > select{
+    padding: 0.3rem 0.3rem;
+    width: fit-content;
+}
+
+@media (max-width: 1250px){
+    .left{
+        display: flex;
+        flex-direction: column;
+        flex: 0.6;
+    }
+    .left__info{
+        margin: 0 1rem;
+    }
+
+    .right{
+        display: flex;
+        flex: 0.4;
+    }
+}
+
+@media (max-width: 800px){
+    .productScreen{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .left{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+    .left__info{
+        margin: 0 1rem;
+    }
+
+    .right{
+        display: flex;
+        flex:1;
+    }
+    .right__info{
+        margin: 1rem;
+        width: 100%;
+    }
+}

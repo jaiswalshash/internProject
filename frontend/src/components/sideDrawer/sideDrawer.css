@@ -1,0 +1,77 @@
+.sideDrawer{
+    width: 65%;
+    height: 100vh;
+    z-index: 200;
+    background-color: rgb(93, 154, 154);
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    transition: all 0.2s ease-out;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+
+.sideDrawer.show{
+    transform: translateX(0);
+}
+
+@media screen and (min-width: 680px) {
+    .sideDrawer.show{
+       display: none;
+    }
+}
+
+ul{
+    width: 96%;
+}
+
+div > ul > li {
+    list-style: none; 
+    background-color:azure;
+    padding: 2px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+div > ul > li > a {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    text-decoration:none;
+    font-size: 1.25rem;
+    font-weight: bolder;
+    color: black;
+}
+
+div > ul > li > a > i{
+    margin-right: 3px;
+}
+
+div > ul > li:hover{
+    background-color: black;
+}
+
+div > ul > li > a:hover {
+    color: azure;
+}
+
+.sideDrawer_cartVal{
+    margin-left: 5px;
+    height: 23px;
+    width: 23px;
+    background-color: black;
+    color: azure;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 50%;
+}
+
+div > ul > li:hover .sideDrawer_cartVal{
+    background-color: azure;
+    color: black;
+}
